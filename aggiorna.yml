@@ -1,0 +1,60 @@
+name: Aggiorna dati campionato
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"      # ogni 5 minuti (GitHub può ritardare di qualche minuto)
+  workflow_dispatch:           # pulsante "Run workflow" per lanciarlo a mano
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      cambiato: ${{ steps.scraper.outputs.cambiato }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Leggi la pagina FIPAV e scrivi dati.json
+        id: scraper
+        env:
+          URL_PRECEDENTE: ${{ steps.pages.outputs.base_url }}/dati.json
+        run: python scraper.py site/dati.json
+
+      - name: Prepara il sito
+        run: cp index.html site/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    # pubblica solo se i dati sono cambiati (o se lo lanci a mano / modifichi il sito)
+    if: needs.build.outputs.cambiato == 'true' || github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

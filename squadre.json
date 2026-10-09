@@ -1,0 +1,85 @@
+{
+  "_nota": "Dati fissi delle squadre. La PRIMA squadra è quella seguita dall'app (indice 0). 'fipav' = nome esatto come compare sul sito FIPAV.",
+  "squadre": [
+    {
+      "fipav": "COMUNELLO VOLLEY ROSA'",
+      "nome": "Comunello Volley Rosà",
+      "impianto": "Palasport · Tezze sul Brenta",
+      "indirizzo": "Via Tre Case, 54, 36056 Baracche VI",
+      "la": 45.706,
+      "lo": 11.752
+    },
+    {
+      "fipav": "CESUNA 2DM",
+      "nome": "Cesuna 2DM",
+      "impianto": "Palasport Auditorium di Galliosito · Gallio",
+      "indirizzo": "Via Roma, 31, 36032 Gallio VI",
+      "la": 45.889,
+      "lo": 11.535
+    },
+    {
+      "fipav": "AURORA 76 TRYTECH",
+      "nome": "Aurora 76 Trytech",
+      "impianto": "S.M. Virgilio · Camisano Vicentino",
+      "indirizzo": "Via Europa, 45, 36043 Camisano Vicentino VI",
+      "la": 45.525,
+      "lo": 11.788
+    },
+    {
+      "fipav": "S.T.A.I. VOLLEY CAMPIGLIA",
+      "nome": "S.T.A.I. Volley Campiglia",
+      "impianto": "Comunale Campiglia · Campiglia dei Berici",
+      "indirizzo": "Via G. Pascoli, 36020 Campiglia dei Berici VI",
+      "la": 45.396,
+      "lo": 11.519
+    },
+    {
+      "fipav": "MELEDO 2DIVM",
+      "nome": "Meledo 2DIVM",
+      "impianto": "S.M. \"Muttoni\" · Sarego",
+      "indirizzo": "Via Damiano Chiesa, 36040 Meledo VI",
+      "la": 45.485,
+      "lo": 11.376
+    },
+    {
+      "fipav": "ROBUR 2DM ROSSA",
+      "nome": "Robur 2DM Rossa",
+      "impianto": "Centro Sportivo Tommaso Assi · Thiene",
+      "indirizzo": "Via San Gaetano, 33H, 36016 Thiene VI",
+      "la": 45.7107,
+      "lo": 11.4778
+    },
+    {
+      "fipav": "USD ALTAIR",
+      "nome": "USD Altair",
+      "impianto": "S.E. Tiepolo · Vicenza",
+      "indirizzo": "Via Palemone Remnio, 14, 36100 Vicenza VI",
+      "la": 45.553,
+      "lo": 11.543
+    },
+    {
+      "fipav": "MARMI FAEDO II DIV.M",
+      "nome": "Marmi Faedo II Div.M",
+      "impianto": "S.M. Crosara · Cornedo Vicentino",
+      "indirizzo": "Via G. G. Trissino, 1, 36073 Cornedo Vicentino VI",
+      "la": 45.609,
+      "lo": 11.396
+    },
+    {
+      "fipav": "XFORM VBV",
+      "nome": "XForm VBV",
+      "impianto": "S.M. Zanella · Bolzano Vicentino",
+      "indirizzo": "Via C. Battisti, 18, 36050 Bolzano Vicentino VI",
+      "la": 45.585,
+      "lo": 11.636
+    },
+    {
+      "fipav": "ROBUR 2DM GIALLA",
+      "nome": "Robur 2DM Gialla",
+      "impianto": "Comunale M. Ausiliatrice · Thiene",
+      "indirizzo": "Via San Gaetano, 87, 36016 Thiene VI",
+      "la": 45.7085,
+      "lo": 11.4755
+    }
+  ]
+}
